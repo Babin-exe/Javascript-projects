@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  background: linear-gradient(135deg, #153677, #4e085f);
+  min-height: 100vh;
+  width: 100%;
+  padding: 10px;
+}
+
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #ffff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 15px;
+}
+h2 > img {
+  width: 30px;
+  margin-left: 20px;
+}
+.todo-app h2 {
+  color: #002765;
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.take {
+  display: flex;
+  flex-wrap: w;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 15px;
+}
+.take input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 10px;
+}
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 40px;
+  background-color: #ff5945;
+}
+ul li {
+  list-style: none;
+  font-size: 18px;
+  padding: 20px 12px 10px 50px;
+  position: relative;
+}
+ul li:before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 15px;
+  left: 8px;
+}
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(images/checked.png);
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  list-style: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ul li span:hover {
+  background: #b0bbcd;
+  border-radius: 20px;
+}
+@media (max-width: 335px) {
+  .todo-app {
+    padding: 30px 20px 60px;
+    margin: 50px auto;
+  }
+
+  .take input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  ul li {
+    font-size: 16px;
+    padding: 12px 10px 10px 45px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+
+  ul li:before {
+    top: 12px;
+    left: 10px;
+    height: 24px;
+    width: 24px;
+  }
+
+  ul li span {
+    top: 6px;
+    right: 6px;
+    width: 28px;
+    height: 28px;
+    font-size: 20px;
+  }
+
+  .take {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .take input,
+  .take button {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .take button {
+    padding: 12px;
+    border-radius: 20px;
+  }
+}
