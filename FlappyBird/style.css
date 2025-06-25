@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+body {
+  background-color: gray;
+}
+.container {
+  background: linear-gradient(135deg, hsl(0, 0%, 98%), rgb(100, 171, 131));
+  height: 80vh;
+  width: 100%;
+  margin: 20px auto;
+  position: relative;
+}
+.bird {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  /* background-image: url("flappybird.png"); */
+  background-color: green;
+  top: 0;
+  z-index: 100;
+  top: 200px;
+  left: 5%;
+}
+.pipes {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: transparent;
+}
+.game_over {
+  height: 100%;
+  background: linear-gradient(135deg, #ffaf, #34ff66);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 300;
+  color: teal;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.pipe {
+  position: absolute;
+  height: 200px;
+  width: 50px;
+}
+.pipe-up {
+  width: 50px;
+  background-color: gray;
+}
+.pipe-down {
+  width: 50px;
+  background-color: green;
+}
