@@ -1,0 +1,24 @@
+.grid {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  background-color: #d0f0ff;
+  margin: auto;
+  overflow: hidden;
+  border: 2px solid #333;
+}
+
+.doodler {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url('doodler.png');
+  background-size: cover;
+}
+
+.platform {
+  position: absolute;
+  width: 85px;
+  height: 15px;
+  background-color: green;
+}
