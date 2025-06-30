@@ -37,7 +37,7 @@ const pauseSVG = `
     stroke="currentColor" stroke-width="1.5" />
 </svg>`;
 
-// Use event delegation so you don't lose the listener
+
 changable.addEventListener("click", () => {
   if (!isPlaying) {
     song.play();
@@ -68,18 +68,14 @@ song.addEventListener("timeupdate", () => {
   circle.style.left = `${percentage * seekbar.offsetWidth}px`;
 });
 
-//only one song so i think it's fine to getthe name this way
+
 const songname = song.src.split("/").pop();
 putname.innerHTML = songname;
 
-//Now i have to add the timer for the song
-// i think i will keep on updating the time as the song progress
-//so i will call a function that will convert these seconds into proper
-//minute and second format i guess :)
+
 
 function formatTimer(total) {
-  //Now i have to conver this total in minutes and second format and return
-  //wherever it is called from
+
 
   let minutes = Math.floor(total / 60);
   let seconds = Math.floor(total % 60);
