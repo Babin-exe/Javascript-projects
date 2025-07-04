@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto&display=swap");
+
+:root {
+  --bgColor: #333;
+  --textPrimary: #fff;
+  --textSecondary: #666;
+  --primaryColor: #fd4;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bgColor);
+  color: var(--textPrimary);
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 600px;
+}
+
+h1 {
+  color: var(--primaryColor);
+}
+
+h1 svg {
+  width: 40px;
+  fill: var(--primaryColor);
+}
+
+#header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 20px 6px 30px;
+}
+
+#buttons {
+  text-align: right;
+}
+
+#info {
+  color: var(--primaryColor);
+}
+
+button {
+  background: rgba(255, 255, 255, 0.5);
+  border: 0;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 5px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.word {
+  display: inline-block;
+  font-family: "Roboto Mono", monospace;
+  margin: 0px 5px;
+}
+
+#game {
+  line-height: 35px;
+  height: 105px;
+  overflow: hidden;
+  position: relative;
+}
+
+#game:focus {
+  outline: none;
+}
+
+#words {
+  color: var(--textSecondary);
+  filter: blur(5px);
+}
+
+#game:focus #words {
+  filter: blur(0);
+}
+
+#game:focus .focus-error {
+  display: none;
+}
+
+.focus-error {
+  position: absolute;
+  inset: 0;
+  text-align: center;
+  padding-top: 40px;
+  color: white;
+  transition: opacity 0.3 ease;
+}
+
+#game.no-error .focus-error {
+  display: none;
+}
+
+#cursor {
+  width: 2px;
+  height: 20px;
+  background-color: var(--primaryColor);
+  position: absolute;
+  display: none;
+  top: 7px;
+  left: 3px;
+  animation: blink 1s step-start infinite;
+  transition: left 0.1s ease, top 0.1s ease;
+  transform: translate(0, 0);
+}
+
+#game:focus #cursor {
+  display: block;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.letter.correct {
+  color: #fff;
+}
+
+.letter.incorrect {
+  color: #f55;
+}
+
+#game.over #words {
+  opacity: 0.5;
+  filter: blur(0px);
+}
+
+#game.over:focus #cursor {
+  display: none;
+}
+
+#game.over .focus-error {
+  display: none;
+}
