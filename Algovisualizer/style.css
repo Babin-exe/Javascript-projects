@@ -1,0 +1,13 @@
+.container {
+  width: 80vw;
+  height: 50vh;
+  background-color: rgb(13, 5, 43);
+  display: flex;
+  margin: auto;
+  align-items: flex-end;
+  gap: 2px;
+  margin-bottom: 50px;
+}
+body {
+  text-align: center;
+}
